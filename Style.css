@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.wrapper
+{
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.img_container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_container
+{
+    position: relative;
+}
+
+.img_container::after
+{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277, 64%, 61%);
+    opacity: .6;
+}
+
+.text_content
+{
+    padding: 13%;
+}
+
+.title
+{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+    font-size: 700;
+    padding-bottom: 24px;
+}
+
+.title span
+{
+    color: hsl(277, 64%, 61%);
+
+}
+
+.sub_titile
+{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.stat_box
+{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.stat_box p.number
+{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 7px;
+}
+
+.stat_box p.text
+{
+    font-family: 'Inter', sans-serif;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2;
+}
+
+@media only screen and (max-width: 768px) and (min-width:507px)
+{
+    body
+    {
+        font-size: 13px;
+    }
+    .text_content
+    {
+        padding: 12%;
+    }
+    .title
+    {
+        font-size: 24px;
+    }
+
+    .stat_box
+    {
+        padding-top: 35px;
+    }
+    .stat_box p.num
+    {
+        font-size: 15px;
+    }
+    .stat_box p.text
+    {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 506px)
+{
+    body
+    {
+        text-align: center;
+    }
+    .wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .img_container
+    {
+        order: -1;
+        
+    }
+    .text_content
+    {
+        padding: 12% 17%;
+    }
+    .stat_box
+    {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .stat_box div
+    {
+        margin-top: 20px;
+    }
+
+    .title
+    {
+        font-size: 25px;
+        line-height: 1.4;
+    }
+    .stat_box p.number
+    {
+        letter-spacing: 1.3;
+    }
+    .stat_box div
+    {
+        padding-top: 2px;
+    }
+    
+}
+
+
+
